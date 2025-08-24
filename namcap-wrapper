@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+output=$(namcap "$@")
+
+# Exit with 1 if there’s output, because any output means errors/issues.
+if [ "$output" != "" ]; then
+  echo "$output"
+  exit 1
+fi

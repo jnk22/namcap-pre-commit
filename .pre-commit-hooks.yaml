@@ -1,0 +1,12 @@
+---
+- id: namcap-system
+  name: namcap PKGBUILD linter (System)
+  language: script
+  entry: namcap-wrapper
+  types: [pkgbuild]
+
+- id: namcap-docker
+  name: namcap PKGBUILD linter (Docker)
+  language: docker
+  entry: namcap-wrapper
+  types: [pkgbuild]

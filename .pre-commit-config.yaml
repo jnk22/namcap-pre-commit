@@ -1,0 +1,76 @@
+---
+repos:
+  # General
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: check-added-large-files
+      - id: check-case-conflict
+      - id: check-executables-have-shebangs
+      - id: check-merge-conflict
+      - id: check-symlinks
+      - id: check-yaml
+      - id: destroyed-symlinks
+      - id: detect-private-key
+      - id: end-of-file-fixer
+      - id: fix-byte-order-marker
+      - id: trailing-whitespace
+
+  # YAML
+  - repo: https://github.com/google/yamlfmt
+    rev: v0.17.2
+    hooks:
+      - id: yamlfmt
+  - repo: https://github.com/adrienverge/yamllint
+    rev: v1.37.1
+    hooks:
+      - id: yamllint
+
+  # Markdown
+  - repo: https://github.com/hukkin/mdformat
+    rev: 0.7.22
+    hooks:
+      - id: mdformat
+        additional_dependencies:
+          - mdformat-config
+  - repo: https://github.com/rvben/rumdl-pre-commit
+    rev: v0.0.140
+    hooks:
+      - id: rumdl
+        args: ["--fix"]
+  - repo: https://github.com/igorshubovych/markdownlint-cli
+    rev: v0.45.0
+    hooks:
+      - id: markdownlint-fix
+
+  # Dockerfile
+  - repo: https://github.com/reteps/dockerfmt
+    rev: v0.3.7
+    hooks:
+      - id: dockerfmt
+        args: ["--newline", "--write"]
+  - repo: https://github.com/AleksaC/hadolint-py
+    rev: v2.13.1
+    hooks:
+      - id: hadolint
+
+  # EditorConfig
+  - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
+    rev: 3.4.0
+    hooks:
+      - id: editorconfig-checker
+
+  # Spelling
+  - repo: https://github.com/crate-ci/typos
+    rev: v1.36.2
+    hooks:
+      - id: typos
+
+  # Commits
+  - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
+    rev: v9.22.0
+    hooks:
+      - id: commitlint
+        additional_dependencies:
+          - "@commitlint/config-conventional"
+        stages: [commit-msg]
