@@ -76,7 +76,9 @@ repos:
       - id: editorconfig-checker
 
   # Spelling
-  - repo: https://github.com/crate-ci/typos
+  # Use typos-mirror as typos uses a mutable tag:
+  # https://github.com/crate-ci/typos/issues/390
+  - repo: https://github.com/adhtruong/mirrors-typos
     rev: v1.36.2
     hooks:
       - id: typos
