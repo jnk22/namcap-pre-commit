@@ -2,7 +2,8 @@
 
 output=$(namcap "$@")
 
-# Exit with 1 if there’s output, because any output means errors/issues.
+# Fail on output (errors) and set exit code for pre-commit compatibility
+# since Namcap prints errors but always exits 0
 if [ -n "$output" ]; then
   printf '%s\n' "$output"
   exit 1
