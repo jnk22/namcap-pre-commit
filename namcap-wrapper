@@ -3,7 +3,7 @@
 output=$(namcap "$@")
 
 # Exit with 1 if there’s output, because any output means errors/issues.
-if [ "$output" != "" ]; then
-  echo "$output"
+if [ -n "$output" ]; then
+  printf '%s\n' "$output"
   exit 1
 fi
