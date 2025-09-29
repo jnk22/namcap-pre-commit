@@ -38,7 +38,7 @@ repos:
         additional_dependencies:
           - mdformat-config
   - repo: https://github.com/rvben/rumdl-pre-commit
-    rev: v0.0.140
+    rev: v0.0.147
     hooks:
       - id: rumdl
         args: ["--fix"]
@@ -54,7 +54,7 @@ repos:
       - id: dockerfmt
         args: ["--newline", "--write"]
   - repo: https://github.com/AleksaC/hadolint-py
-    rev: v2.13.1
+    rev: v2.14.0
     hooks:
       - id: hadolint
 
@@ -79,7 +79,7 @@ repos:
   # Use typos-mirror as typos uses a mutable tag:
   # https://github.com/crate-ci/typos/issues/390
   - repo: https://github.com/adhtruong/mirrors-typos
-    rev: v1.36.2
+    rev: v1.36.3
     hooks:
       - id: typos
 
