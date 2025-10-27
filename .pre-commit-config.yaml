@@ -22,7 +22,7 @@ repos:
 
   # YAML
   - repo: https://github.com/google/yamlfmt
-    rev: v0.17.2
+    rev: v0.20.0
     hooks:
       - id: yamlfmt
   - repo: https://github.com/adrienverge/yamllint
@@ -32,13 +32,13 @@ repos:
 
   # Markdown
   - repo: https://github.com/hukkin/mdformat
-    rev: 0.7.22
+    rev: 1.0.0
     hooks:
       - id: mdformat
         additional_dependencies:
           - mdformat-config
   - repo: https://github.com/rvben/rumdl-pre-commit
-    rev: v0.0.147
+    rev: v0.0.166
     hooks:
       - id: rumdl
         args: ["--fix"]
@@ -49,7 +49,7 @@ repos:
 
   # Dockerfile
   - repo: https://github.com/reteps/dockerfmt
-    rev: v0.3.7
+    rev: v0.3.9
     hooks:
       - id: dockerfmt
         args: ["--newline", "--write"]
@@ -79,13 +79,13 @@ repos:
   # Use typos-mirror as typos uses a mutable tag:
   # https://github.com/crate-ci/typos/issues/390
   - repo: https://github.com/adhtruong/mirrors-typos
-    rev: v1.36.3
+    rev: v1.38.1
     hooks:
       - id: typos
 
   # Commits
   - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
-    rev: v9.22.0
+    rev: v9.23.0
     hooks:
       - id: commitlint
         additional_dependencies:
