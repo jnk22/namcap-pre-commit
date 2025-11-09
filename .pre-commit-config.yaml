@@ -38,7 +38,7 @@ repos:
         additional_dependencies:
           - mdformat-config
   - repo: https://github.com/rvben/rumdl-pre-commit
-    rev: v0.0.166
+    rev: v0.0.173
     hooks:
       - id: rumdl
         args: ["--fix"]
@@ -64,6 +64,11 @@ repos:
     hooks:
       - id: shfmt
         args: ["-w", "-i", "2", "-ci"]
+  - repo: https://github.com/lovesegfault/beautysh
+    rev: v6.4.1
+    hooks:
+      - id: beautysh
+        args: ["-i", "2"]
   - repo: https://github.com/shellcheck-py/shellcheck-py
     rev: v0.11.0.1
     hooks:
@@ -71,17 +76,25 @@ repos:
 
   # EditorConfig
   - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
-    rev: 3.4.0
+    rev: 3.4.1
     hooks:
       - id: editorconfig-checker
 
   # Spelling
-  # Use typos-mirror as typos uses a mutable tag:
-  # https://github.com/crate-ci/typos/issues/390
-  - repo: https://github.com/adhtruong/mirrors-typos
-    rev: v1.38.1
+  - repo: https://github.com/crate-ci/typos
+    rev: v1.39.0
     hooks:
       - id: typos
+
+  # Security
+  - repo: https://github.com/Yelp/detect-secrets
+    rev: v1.5.0
+    hooks:
+      - id: detect-secrets
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.29.0
+    hooks:
+      - id: gitleaks
 
   # Commits
   - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
