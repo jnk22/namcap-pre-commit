@@ -38,7 +38,7 @@ repos:
         additional_dependencies:
           - mdformat-config
   - repo: https://github.com/rvben/rumdl-pre-commit
-    rev: v0.0.173
+    rev: v0.0.177
     hooks:
       - id: rumdl
         args: ["--fix"]
@@ -82,7 +82,7 @@ repos:
 
   # Spelling
   - repo: https://github.com/crate-ci/typos
-    rev: v1.39.0
+    rev: v1
     hooks:
       - id: typos
 
